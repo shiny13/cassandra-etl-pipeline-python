@@ -36,3 +36,29 @@ Below are steps for each component of this project.
 2. Make necessary edits to Part II of the notebook template to include Apache Cassandra `CREATE` and `INSERT` statements to load processed records into relevant tables in your data model
 3. Test by running `SELECT` statements after running the queries on your database
 
+## Table schema description
+The following section describes the table schema in this project
+
+1. music_app_history1
+    * sessionId int (Primary key)
+    * itemInSession int (Primary key)
+    * artist text 
+    * song text 
+    * length float
+    
+2. music_app_history2
+    * userId int (Primary key)
+    * sessionId int (Primary key)
+    * itemInSession int (Cluster key)
+    * artist text 
+    * song text 
+    * firstName text 
+    * lastName text
+    
+3. music_app_history3
+    * song text (Primary key)
+    * userId int (Primary key)
+    * firstName text
+    * lastName text
+
+
